@@ -60,3 +60,6 @@ If you are not prompted to install the fonts, you can find them in the fonts fol
 * I like to personalize my colors as well and i use coolnight preset which also I have in my assets.
 * If you'd like to use it, just download the profile and import it in Profiles>Colors>Color Presets
 
+
+### Result
+![My Terminal](https://github.com/raghavkrish/dev-setup/blob/main/terminal/assets/result/result.png?raw=true)
