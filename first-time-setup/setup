@@ -1,0 +1,5 @@
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew update && brew upgrade
+xargs brew install < brew.txt
+xargs brew install --cask < brew-cask.txt
+brew cleanup

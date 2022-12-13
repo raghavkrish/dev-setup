@@ -7,7 +7,7 @@ Ive been an avid user of fish shell not until very recently, ive moved to zsh. z
 
 ### Install Homebrew
 ```
-curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
 

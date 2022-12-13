@@ -1,0 +1,13 @@
+iterm2
+alfred
+rectangle
+alt-tab
+app-cleaner
+android-file-transfer
+android-platform-tools
+keepingyouawake
+vlc
+time-out
+sublime-text
+insomnia
+docker
