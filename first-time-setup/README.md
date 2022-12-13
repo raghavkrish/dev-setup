@@ -1,6 +1,6 @@
 ## Setting up a mac for the first first time
 
-### Install Homebrew
+Just run setup and you are good to go
 ```
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+./setup
 ```
