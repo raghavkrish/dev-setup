@@ -1,0 +1,8 @@
+nvm
+curl
+cowsay
+ffmpeg
+time-out
+terraform
+youtube-dl
+imagemagick
