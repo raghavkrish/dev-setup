@@ -1,0 +1,70 @@
+BASECMD=`basename $0`
+
+NO_OF_ARGS=$#
+MAIN_COMMAND=$1
+NO_ARGS_FLAG=0
+ARGS=${@:2}
+
+print_usage() {
+  echo "\nUsage: $BASECMD subcommand args"
+  echo "\nSubcommands: "
+  echo "Subcommand     Alias            Help"
+  echo "add             a               - adds the specified files to stage"
+  echo "reset           r               - removes the specified files from stage to working copy"
+  echo "commit          ci              - commits the code into the repo"
+  echo "checkout        co              - checks out new branch or resets the file to head"
+  echo "pull            p               - Pulls from origin"
+  echo "push            pu              - pushes to origin"
+  echo "status          s               - print the status"
+  echo "branch          b               - prints the branches"
+  echo "diff            d               - prints the diff"
+  exit 1
+}
+
+if [[ $NO_OF_ARGS -eq 0 ]]
+then
+  print_usage
+fi
+
+case $MAIN_COMMAND in
+  pull|p)      NO_ARGS_FLAG=1; CMD="pull";
+               ;;
+  push|pu)     NO_ARGS_FLAG=1; CMD="push"
+               ;;
+  add|a)       CMD="add"
+               ;;
+  reset|r)     CMD="reset"
+               ;;
+  commit|ci)   CMD="commit"
+               ;;
+  checkout|co) CMD="checkout"
+               ;;
+  status|s)    NO_ARGS_FLAG=1; CMD="status"
+               ;;
+  branch|b)    NO_ARGS_FLAG=1; CMD="branch"
+               ;;
+  diff|d)      CMD="diff"
+               ;;
+  *)           print_usage
+esac
+
+if [[ $NO_ARGS_FLAG -eq 1 ]]
+then
+    if  [[ $# -gt 1 ]]
+    then
+      echo "Please don't provide arguments for this command"
+      exit 2
+    else
+      COMMAND_TO_EXECUTE="git $CMD"
+    fi
+else
+    if [[ $# -lt 2 ]]
+    then
+      echo "Please provide arguments for this command"
+      exit 3
+    else
+      COMMAND_TO_EXECUTE="git $CMD $ARGS"
+    fi
+fi
+
+eval $COMMAND_TO_EXECUTE
