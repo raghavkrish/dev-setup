@@ -11,3 +11,4 @@ time-out
 sublime-text
 insomnia
 docker
+hiddenbar
