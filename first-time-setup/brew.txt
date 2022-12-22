@@ -6,3 +6,7 @@ time-out
 terraform
 youtube-dl
 imagemagick
+tldr
+thefuck
+jq
+wget

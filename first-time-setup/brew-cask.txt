@@ -11,3 +11,6 @@ time-out
 sublime-text
 insomnia
 docker
+hiddenbar
+evernote
+tomighty
