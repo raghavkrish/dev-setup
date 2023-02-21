@@ -10,3 +10,10 @@ tldr
 thefuck
 jq
 wget
+zellij
+fzf
+pipes-sh
+task
+ditto
+cmatrix
+autojump
