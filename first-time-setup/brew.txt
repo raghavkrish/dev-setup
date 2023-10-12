@@ -17,3 +17,6 @@ task
 ditto
 cmatrix
 autojump
+diff-so-fancy
+bat
+cliclick
