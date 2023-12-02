@@ -1,1 +1,29 @@
 alias code="cd ~/Code/"
+alias ls="colorls"
+alias server="python3 -m http.server 8000"
+alias downloads="cd ~/Downloads"
+alias documents="cd ~/Documents"
+alias diff="git diff --color | diff-so-fancy"
+alias zla="zellij list-sessions"
+alias zka="zellij ka"
+alias za=""
+
+function meaning() {
+  curl dict.org/d:$1
+}
+
+function qr() {
+  curl qrenco.de/$1
+}
+
+function unshorten() {
+  curl --head --location "$1" | grep location
+}
+
+function up() {
+  curl -Is $1
+}
+
+function myip() {
+  curl checkip.amazonaws.com
+}
